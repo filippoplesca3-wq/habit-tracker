@@ -30,10 +30,6 @@ python3 -m http.server 8000
 
 and visit `http://localhost:8000`
 
-## Deployment
-
-Since this is a static site (plain HTML, CSS, JS, no framework), it can be
-deployed on GitHub Pages, Netlify or Vercel with no extra configuration.
 
 ## Notes
 
