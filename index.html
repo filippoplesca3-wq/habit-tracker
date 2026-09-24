@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habit Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Habit Tracker</h1>
+      <p>Keep track of your daily habits</p>
+    </header>
+
+    <section class="form-add">
+      <input id="habitInput" type="text" placeholder="New habit (e.g. Read 10 pages)" maxlength="40">
+      <select id="colorPick">
+        <option value="#4a4a4a">Gray</option>
+        <option value="#2e7d32">Green</option>
+        <option value="#1565c0">Blue</option>
+        <option value="#c62828">Red</option>
+        <option value="#ef6c00">Orange</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </section>
+
+    <section class="stats">
+      <div class="stat-box">
+        <span id="statTotal">0</span>
+        <label>Habits</label>
+      </div>
+      <div class="stat-box">
+        <span id="statToday">0%</span>
+        <label>Done today</label>
+      </div>
+      <div class="stat-box">
+        <span id="statBestStreak">0</span>
+        <label>Best streak</label>
+      </div>
+    </section>
+
+    <main class="content">
+      <div id="habitList" class="habit-list"></div>
+
+      <div class="chart-box">
+        <h2>Last 14 days</h2>
+        <canvas id="chart" width="300" height="160"></canvas>
+      </div>
+    </main>
+
+    <p id="emptyState" class="empty-state">No habits added yet.</p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
