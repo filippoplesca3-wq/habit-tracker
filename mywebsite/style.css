@@ -1,0 +1,193 @@
+/* Stile base per il tracker delle abitudini */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+header p {
+  color: #555;
+  margin-top: 0;
+}
+
+.form-add {
+  display: flex;
+  gap: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.form-add input[type="text"] {
+  flex: 1;
+  min-width: 160px;
+  padding: 8px;
+  border: 1px solid #999;
+  font-size: 0.95rem;
+}
+
+.form-add select {
+  padding: 8px;
+  border: 1px solid #999;
+}
+
+.form-add button {
+  padding: 8px 16px;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.form-add button:hover {
+  background-color: #555;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.stat-box label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 16px;
+}
+
+@media (max-width: 650px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.habit-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.habit-check {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #999;
+  background-color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.habit-check.done {
+  background-color: var(--dot-color, #333);
+  color: #fff;
+  border-color: var(--dot-color, #333);
+}
+
+.habit-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.habit-name {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.habit-meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.habit-streak {
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.habit-delete {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.habit-delete:hover {
+  color: #c62828;
+}
+
+.chart-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  height: fit-content;
+}
+
+.chart-box h2 {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+  display: none;
+}
